@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+
+@font-face {
+    font-family: 'MiFuente'; /* Nombre que le asignas a la fuente */
+    src: url('PlayfairDisplay-Bold.ttf') format('truetype'); }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
     font-family: "Montserrat", sans-serif;
+  
   }
 body{
     display: flex;
@@ -12,11 +17,13 @@ body{
     justify-content: center;
     height: 70vh;
     background-color: rgb(255, 255, 255);
+    background-image: url(fonod.webp);
 
 }
 .contenedor {
     position: relative; /* Establece un contexto de posicionamiento */
     justify-content: center;
+    
 }
 .fondo img {
     width: 70%; /* Asegúrate de que la imagen ocupe todo el contenedor */
@@ -27,6 +34,7 @@ body{
     
     
 }
+
     
 
 .Buscador {
@@ -36,9 +44,9 @@ body{
     background-color: white;
     border-radius: 15px;
     position: absolute;
-    margin-top: -425px;
+    margin-top: -235px;
     right: 260px;
-  
+    
 
 }
 
@@ -121,5 +129,198 @@ body{
     font-size: 1rem;
     font-weight: 500;
     color:purple;
+
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 1.5rem;
+
+}
+
+.meal-result {
+    margin-top: 4rem;
+    
+}
+
+.meal-item{
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgba(0,0,0,0.79);
+    margin: 2rem 0;
+    
+    
+    
+}
+ 
+.meal-img{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    
+}
+
+}
+
+.meal-img img:first-child {
+    position: relative; /* Establece el posicionamiento relativo para la primera imagen */
+    z-index: -2;
+   
+}
+
+.meal-img img:last-child {
+    position: absolute; /* Establece el posicionamiento absoluto para la segunda imagen */
+    top: 100; /* Ajusta la posición vertical según sea necesario */
+    left: 99; /* Ajusta la posición horizontal según sea necesario */
+    height: 98px;
+    width: 135px;
+    margin-bottom: 37px;
+  
+}
+
+
+.meal-img img {
+    width: 70%;
+   
+}
+.meal-name {
+    padding: 1.5rem 0.5rem;
+    text-align: center;
+    
+}
+
+.meal-name :first-child {
+    position: relative; 
+    margin-top: -115px;
+    padding: 30px;
+    
+   
+}
+
+.meal-name h3{
+    font-size: 0.88rem;
+    text-align: center;
+    font-family: 'MiFuente', sans-serif;
+    font-weight: 800;
+    color: #4e3b20;
+    font-style: bold;
+
+
+}
+
+.recipe-btn{
+    text-decoration: none;
+    color: #fff;
+    background: teal;
+    font-weight: 500;
+    font-size: 1,1rem;
+    padding: 0.3rem 0;
+    display: block;
+    width: 135px;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2 rem;
+    -o-border-radius: 2rem;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+
+.meal-details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    background-image: url(mapa.jpg.png);
+    background-size: cover; /* Para cubrir toda el área del div con la imagen */
+    background-position: center; /* Para centrar la imagen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    left: 500px;
+    
+}
+
+.recipe-meal-img img {
+    width: 50%;
+    padding: 20px;
+}
+
+.recipe-close-btn{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.8rem;
+    background-color: #f1d2a7;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+}
+.recipe-title{
+    letter-spacing: 1px;
+    padding-bottom: 1rem;
+}
+.recipe-category{
+    background: #fff;
+    font-weight: 600;
+    color: var(--tenne-tawny);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+}
+
+.recipe-category{
+    background: #fff;
+    font-weight: 600;
+    color: var(--tenne-tawny);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+}
+.recipe-instruct{
+    padding: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(3,0.19fr);
+        gap:2rem
+        
+        
+    }
+    
+}
+.meal-result{
+  display: none;
 
 }
