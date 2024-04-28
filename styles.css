@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: "Montserrat", sans-serif;
+  }
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    background-color: rgb(255, 255, 255);
+
+}
+.contenedor {
+    position: relative; /* Establece un contexto de posicionamiento */
+    justify-content: center;
+}
+.fondo img {
+    width: 70%; /* Asegúrate de que la imagen ocupe todo el contenedor */
+    height: auto;
+    margin-left: 200px;
+    margin-top: 350px;
+    
+    
+    
+}
+    
+
+.Buscador {
+    display: flex;
+    align-items: center;
+    min-width: 700px;
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    margin-top: -425px;
+    right: 260px;
+  
+
+}
+
+.despegable { 
+    position: relative;
+    width: 280px;
+    border-radius: 15px;
+    border: 1px solid white;
+    cursor: pointer;
+    background-color: purple;
+    box-shadow: shadow;
+}
+
+.texto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 500;
+    color:rgb(255, 255, 255);
+    padding: 1rem 1.5rem;
+}
+
+.lista-despegable {
+    display: block;
+    position:absolute;
+    top: 4rem;
+    left:0;
+    width:100%;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}   
+
+#list.show{
+    max-height: 300px;
+
+}
+.lista-despegable-item {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 1rem 0 1rem 1.5rem;
+    cursor:pointer;
+    transition: margin-left 0.2s ease, color 0.2s ease;
+    background-color: white;
+}
+
+.lista-despegable-item:hover {
+    margin-left: 0.5rem;
+    color: purple;
+}
+
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+    width: 100%;
+    color: purple;
+
+}
+
+.barra-busqueda input {
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: purple;
+    border: 0;
+    outline: 0;
+}
+
+.barra-busqueda i{
+    font-size: 1.3rem;
+    cursor: pointer;
+
+}
+.barra-busqueda input::placeholder {
+    font-size: 1rem;
+    font-weight: 500;
+    color:purple;
+
+}
