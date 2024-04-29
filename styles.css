@@ -12,12 +12,15 @@
   
   }
 body{
+    overflow-y: hidden;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     height: 70vh;
     background-color: rgb(255, 255, 255);
     background-image: url(fonod.webp);
+ 
 
 }
 .contenedor {
@@ -26,10 +29,9 @@ body{
     
 }
 .fondo img {
-    width: 70%; /* Asegúrate de que la imagen ocupe todo el contenedor */
-    height: auto;
-    margin-left: 200px;
-    margin-top: 350px;
+    height: 700px;
+    margin-left: 769px;
+    margin-top: 420px;
     
     
     
@@ -44,8 +46,8 @@ body{
     background-color: white;
     border-radius: 15px;
     position: absolute;
-    margin-top: -235px;
-    right: 260px;
+    margin-top: -458px;
+    right: 620px;
     
 
 }
@@ -144,11 +146,13 @@ body{
 }
 
 .meal-item{
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 21px -12px rgba(0,0,0,0.79);
-    margin: 2rem 0;
     
+    background-size: 100%;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    box-shadow: 0 4px 21px -12px rgba(0,0,0,0.79);
+    
+   
+    background-size: 100%;
     
     
 }
@@ -164,27 +168,29 @@ body{
     
 }
 
-}
 
-.meal-img img:first-child {
-    position: relative; /* Establece el posicionamiento relativo para la primera imagen */
-    z-index: -2;
-   
-}
+
+
 
 .meal-img img:last-child {
-    position: absolute; /* Establece el posicionamiento absoluto para la segunda imagen */
-    top: 100; /* Ajusta la posición vertical según sea necesario */
-    left: 99; /* Ajusta la posición horizontal según sea necesario */
-    height: 98px;
-    width: 135px;
-    margin-bottom: 37px;
-  
+    display: block;
+    margin-left: -292px;
+    top: 100; 
+    left: 99; 
+    height: 187px;
+    width: 260px;
+    margin-bottom: 67px;
+    object-fit: cover;
 }
 
 
 .meal-img img {
-    width: 70%;
+    width: 100%;
+    display: block;
+    max-width:322px;
+  
+    width: auto;
+    height: auto;
    
 }
 .meal-name {
@@ -193,22 +199,23 @@ body{
     
 }
 
-.meal-name :first-child {
-    position: relative; 
-    margin-top: -115px;
-    padding: 30px;
-    
-   
-}
 
 .meal-name h3{
-    font-size: 0.88rem;
+    font-size: 20px;
     text-align: center;
     font-family: 'MiFuente', sans-serif;
-    font-weight: 800;
+    font-weight: 400;
     color: #4e3b20;
     font-style: bold;
-
+    margin-top: -150px;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 1;
+    margin-left: 100px;
+    max-width: 230px;
+   overflow: hidden;
+   text-overflow: ellipsis; 
+   white-space: nowrap;
 
 }
 
@@ -238,8 +245,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    width: 30%;
-    height: 100%;
+    width: 400px;
     text-align: center;
     background-image: url(mapa.jpg.png);
     background-size: cover; /* Para cubrir toda el área del div con la imagen */
@@ -249,13 +255,25 @@ body{
     align-items: center;
     justify-content: center;
     padding: 2rem 0;
-    left: 500px;
+    overflow: auto;
+    display: none;
+    max-width: 100%;
+    
+
     
 }
 
 .recipe-meal-img img {
-    width: 50%;
+    width: 300;
     padding: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
 }
 
 .recipe-close-btn{
@@ -310,17 +328,26 @@ body{
     padding: 1rem 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 588px) {
     #meal{
         display: grid;
-        grid-template-columns: repeat(3,0.19fr);
-        gap:2rem
-        
-        
+        grid-template-columns: repeat(3,1fr);
+        gap:5rem;
     }
     
 }
-.meal-result{
-  display: none;
+#meal {
+    min-height: 10vh;
+    max-height: 10vh;
+    height: 10vh; 
+    display: none;
+   
+    
+    
+}
 
+/* js related */
+.showRecipe{
+    display: block;
+   
 }
