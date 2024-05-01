@@ -12,7 +12,7 @@
   
   }
 body{
-    overflow-y: hidden;
+    
     
     display: flex;
     align-items: center;
@@ -242,38 +242,36 @@ body{
 }
 
 .meal-details {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 400px;
+ 
+    width: 2000px;
+    height: 900px;
     text-align: center;
-    background-image: url(mapa.jpg.png);
+    background-image: url(mapa2.png);
     background-size: cover; /* Para cubrir toda el área del div con la imagen */
     background-position: center; /* Para centrar la imagen */
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem 0;
-    overflow: auto;
-    display: none;
+    z-index: 1;
+   position: absolute;
     max-width: 100%;
+
+    
+    display: none;
     
 
     
 }
 
 .recipe-meal-img img {
-    width: 300;
-    padding: 20px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+   
+    width: 200px;
+    height: 200px;
+    padding-top: 25px;
     margin: 0 auto;
     display: block;
-    max-width: 100%;
+    
 }
 
 .recipe-close-btn{
@@ -297,14 +295,16 @@ body{
 }
 .recipe-title{
     letter-spacing: 1px;
-    padding-bottom: 1rem;
+    padding-bottom: 5rem;
+    
+    margin-top: 150px;
 }
 .recipe-category{
     background: #fff;
     font-weight: 600;
     color: var(--tenne-tawny);
     display: inline-block;
-    padding: 0.2rem 0.5rem;
+    
     border-radius: 0.3rem;
     -webkit-border-radius: 0.3rem;
     -moz-border-radius: 0.3rem;
@@ -325,7 +325,10 @@ body{
     -o-border-radius: 0.3rem;
 }
 .recipe-instruct{
-    padding: 1rem 0;
+   
+    max-width: 700px;
+    margin-left: 270px;
+    
 }
 
 @media screen and (min-width: 588px) {
@@ -341,13 +344,11 @@ body{
     max-height: 10vh;
     height: 10vh; 
     display: none;
-   
+
     
-    
+  
 }
 
-/* js related */
 .showRecipe{
     display: block;
-   
 }
