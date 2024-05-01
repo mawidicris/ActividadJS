@@ -352,3 +352,6 @@ body{
 .showRecipe{
     display: block;
 }
+#notFoundImage {
+  display: none;
+}   

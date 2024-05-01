@@ -93,6 +93,7 @@ function getMealList(){
         } else{
             html = "Sorry, we didn't find any meal!";
             mealList.classList.add('notFound');
+            document.getElementById('notFoundImage').style.display = 'block';
         }
         var audio = document.getElementById('welcomeAudio');
         audio.play();
@@ -118,8 +119,8 @@ function showMeals(meals) {
         `;
     });
     mealList.innerHTML = html;
-    mealList.appendChild(resetBtn); // Agrega botón de reinicio
-    mealList.classList.remove('notFound');
+   
+   
     mealList.style.display = "grid";
     document.body.style.overflowY = "auto";
 }
@@ -163,26 +164,5 @@ function mealRecipeModal(meal) {
 
 }
 
-// Función para restablecer todo
-function resetAll() {
-    document.getElementById('search-input').value = ''; // Reiniciar campo de búsqueda
-    mealList.innerHTML = ''; // Limpiar lista de comidas
-   
-    span.innerText = ''; // Limpiar texto de span
-    input.placeholder = "Search for..."; // Restablecer placeholder del input
-    allMeals = []; // Limpiar los resultados almacenados
-    shownMealIndex = 0; // Reiniciar el índice de las comidas mostradas
-}
-
-// Botón "Mostrar más"
-const showMoreBtn = document.createElement('button');
-showMoreBtn.innerText = 'Show More';
-showMoreBtn.addEventListener('click', showMoreResults);
-
-function showMoreResults() {
-    const remainingMeals = allMeals.slice(shownMealIndex, shownMealIndex + 18); // Obtiene las comidas restantes
-    showMeals(remainingMeals); // Muestra las comidas restantes
-    shownMealIndex += 18; // Actualiza el índice de las comidas mostradas
-}
 
 
